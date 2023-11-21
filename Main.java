@@ -7,6 +7,9 @@ public class Main {
         System.out.println(longData(data));
     }
     public static String longData(OffsetDateTime data){
+        if(data==null){
+            return null;
+        }
         return data.format(DateTimeFormatter.ofPattern("dd MMMM yyyy"));
     }
 }
